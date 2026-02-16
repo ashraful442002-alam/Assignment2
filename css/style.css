@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body{
+    background-color: #0f0524;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #0f0524;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+
+
+
+}
+
+.logo span{
+    background: linear-gradient(to bottom, #d63384, #bc13fe ,#feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover{
+    color: rgb(111, 144, 111);
+
+}
+
+
+.subscribe-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    background: linear-gradient(45deg, #fce38a, #f38181, #e23e57, #95389e);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.subscribe-btn:hover{
+    transform: scale(1.1);
+}
