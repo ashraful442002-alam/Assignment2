@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechWave Podcast</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg-dark: #0f0f1a;
+      --purple-gradient: linear-gradient(135deg, #7c3aed, #ec4899);
+      --text-light: #e2e8f0;
+      --text-muted: #94a3b8;
+      --card-bg: #1e1e2f;
+      --accent: #a855f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,15,26,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(168,85,247,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--purple-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .btn-subscribe {
+      background: var(--purple-gradient);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .btn-subscribe:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(168,85,247,0.4);
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 8rem 0 6rem;
+    }
+
+    .content {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 2rem;
+     
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-circle::before {
+      content: "";
+      position: absolute;
+      inset: -15px;
+      background: var(--purple-gradient);
+      border-radius: 50%;
+      filter: blur(30px);
+      opacity: 0.6;
+      z-index: -1;
+    }
+
+    .hero-circle i {
+      font-size: 7rem;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 8vw, 6.5rem);
+      margin-bottom: 1rem;
+      background: var(--purple-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1.35rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--purple-gradient);
+      color: white;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn-outline {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      text-align: center;
+      padding: 4rem 0;
+      background: rgba(30,30,47,0.4);
+      margin: 3rem 0;
+      border-radius: 16px;
+    }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Why Choose */
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      margin: 5rem 0 3.5rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 5rem;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 2.2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(168,85,247,0.12);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .feature-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      background: var(--purple-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Episodes */
+    .episodes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-bottom: 6rem;
+    }
+
+    .episode-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(168,85,247,0.1);
+    }
+
+    .episode-img-wrapper {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .episode-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .episode-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .episode-card:hover .play-overlay {
+      opacity: 1;
+    }
+
+    .play-btn {
+      width: 70px;
+      height: 70px;
+      background: var(--purple-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    .episode-info {
+      padding: 1.6rem;
+    }
+
+    .episode-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .episode-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .duration {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Host */
+    .host-section {
+      text-align: center;
+      padding: 6rem 0;
+      background: linear-gradient(to bottom, rgba(30,30,47,0.3), transparent);
+    }
+
+    .host-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 1.8rem;
+    }
+
+    .social-links {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      font-size: 1.6rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 0 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(168,85,247,0.1);
+    }
+
+    .platform-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0 2rem;
+      font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 5rem 0 4rem; }
+      .hero h1 { font-size: 3.8rem; }
+      .hero-buttons { flex-direction: column; }
+      .nav-links { display: none; } /* mobile menu দরকার হলে পরে যোগ করা যাবে */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">TechWave</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#episodes">Episodes</a>
+          <a href="#host">Host</a>
+        </div>
+        <button class="btn-subscribe">Subscribe →</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+     <div class="content">
+        <div class="profile-wrapper">
+          <img src="assets/hero-circle.png" alt="" class="circle-img">
+          <img src="assets/microphone.png" alt="" class="mic-icon">
+          <span class="badge-new">
+            NEW
+          </span>
+      <h1>TechWave</h1>
+      <p>Your daily dose of tech insights, productivity hacks, and personal growth</p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary"><i class="fab fa-spotify"></i> Listen On Spotify</a>
+        <a href="#" class="btn-outline">Subscribe</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats">
+      <div>
+        <div class="stat-number">150K+</div>
+        <div class="stat-label">MONTHLY LISTENERS</div>
+      </div>
+      <div>
+        <div class="stat-number">200+</div>
+        <div class="stat-label">EPISODES PUBLISHED</div>
+      </div>
+      <div>
+        <div class="stat-number">4.9 ★</div>
+        <div class="stat-label">AVERAGE RATING</div>
+      </div>
+      <div>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">INDUSTRY EXPERTS</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Why Choose TechWave</h2>
+
+    <div class="cards-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-headphones"></i></div>
+        <h3>Premium Audio Quality</h3>
+        <p>Experience crystal-clear sound with professional-grade recording equipment and expert audio engineering.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Friendly</h3>
+        <p>Listen on the go with seamless mobile experience and offline downloads.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-globe"></i></div>
+        <h3>Global Community</h3>
+        <p>Connect with tech enthusiasts from over 120 countries worldwide.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Exclusive Interviews</h3>
+        <p>Access to industry titans, startup founders, and tech visionaries you won’t find anywhere else.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Rich Resources</h3>
+        <p>Show notes, transcripts, and additional learning materials for every episode.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Featured Episodes</h2>
+
+    <div class="episodes-grid">
+      <div class="episode-card">
+        <div class="episode-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" alt="AI discussion">
+          <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        </div>
+        <div class="episode-info">
+          <h3 class="episode-title">The Future of AI in Everyday Life</h3>
+          <p class="episode-desc">Exploring how artificial intelligence is transforming our daily routines...</p>
+          <div class="duration">42 min</div>
+        </div>
+      </div>
+
+      <div class="episode-card">
+        <div class="episode-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=800" alt="Remote work">
+          <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        </div>
+        <div class="episode-info">
+          <h3 class="episode-title">Building Better Habits for Remote Work</h3>
+          <p class="episode-desc">Practical strategies for staying productive and maintaining work-life balance...</p>
+          <div class="duration">35 min</div>
+        </div>
+      </div>
+
+      <div class="episode-card">
+        <div class="episode-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800" alt="Career talk">
+          <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        </div>
+        <div class="episode-info">
+          <h3 class="episode-title">Career Growth in Tech: A Roadmap</h3>
+          <p class="episode-desc">Expert advice on navigating your tech career from junior to senior leadership...</p>
+          <div class="duration">51 min</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="host-section">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Alex Kumar" class="host-img">
+      <h2>Alex Kumar</h2>
+      <p>Techextrepreneur, productivity expert, and lifelong learner.<br>Alex has been in the tech industry for over 10 years, working with startups and Fortune 500 companies.</p>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <h2 class="logo" style="font-size:2.2rem; margin-bottom:1rem;">TechWave</h2>
+      
+      <div class="platform-icons">
+        <i class="fab fa-spotify"></i>
+        <i class="fab fa-apple"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+
+      <p>© 2026 TechWave Podcast. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

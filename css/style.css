@@ -1,73 +1,199 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.body{
-    background-color: #0f0524;
-
-}
-
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
-    background-color: #0f0524;
-    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #1A0B2E;
+    
+
 }
 
 .logo{
+    height: 32px;
+    width: 219px;
     font-size: 28px;
     font-weight: 900;
     color: white;
-
-
-
+    margin-top: 24px;
 }
 
 .logo span{
-    background: linear-gradient(to bottom, #d63384, #bc13fe ,#feb47b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        background: linear-gradient(-180deg,#9100F8,#FB09B4,#f7e83f95);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+ 
 }
 
-
-.nav-links{
+.menu{
+    display: flex;
     list-style: none;
-    display: flex;
-    gap: 40px;
-}
-
-.nav-links a{
-    text-decoration: none;
-    color: #cccccc;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover{
-    color: rgb(111, 144, 111);
-
-}
-
-
-.subscribe-btn{
-    display: flex;
+    margin-top: 36px;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 10px 25px;
-    background: linear-gradient(45deg, #fce38a, #f38181, #e23e57, #95389e);
-    color: white;
+    gap: 40px;
+    text-align: center;
+
+}
+
+
+.menu a{
+     
     text-decoration: none;
-    border-radius: 50px;
+    list-style: none;
+    color: white;
     font-weight: 900;
     font-size: 16px;
-    transition: transform 0.2s;
+    text-align: center;
 }
 
-.subscribe-btn:hover{
-    transform: scale(1.1);
+.menu a:hover{
+    color: rgba(161, 0, 105, 0.946);
+    
+}
+
+.subscribe-btn{
+  
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #ffcc33, #ff33cc, #9933ff);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10000px;
+    padding: 12px 16px;
+    margin-top: 24px;
+
+   
+   
+
+    
+
+}
+
+.hero{
+    min-height: 100vh;
+    background: url("../assets/hero-bg.png")  center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+
+}
+
+.circle{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+
+
+}
+
+.circle-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    
+
+
+
+}
+
+
+
+.mic{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 33%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    
+    
+}
+
+
+.badge{
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #00FF88;
+    color: #1A0B2E;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 1000px;
+    box-shadow: 0 3px 27px #00ff886b;
+  
+}
+
+.content h1{
+    font-size: 60px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.content p{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+
+.buttons{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+   
+
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top:24px ;
+    padding-left: 97px;
+    border-radius:10000px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn img{
+    width: 20px;
+}
+
+.spotify{
+    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+    padding: 12px 20px;
+    color: white;
+}
+
+.subscribe{
+    border: 1px solid #00FF88;
+    padding: 12px 20px;
+    gap: 8px;
+    color: #00FF88;
+    font-weight: 600;
+
+}
+
+.subscribe:hover {
+    background: #00ff88;
+    color: black;
 }
