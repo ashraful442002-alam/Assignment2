@@ -1,3 +1,7 @@
+.body{
+    background: #1A0B2E;
+    margin: 0;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -197,3 +201,103 @@
     background: #00ff88;
     color: black;
 }
+
+
+
+.about-section h2{
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+
+}
+
+.about-section p{
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.663);
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+hr{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #FFFFFF;
+}
+
+
+.cart-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 200px;
+    gap: 80px;
+    text-align: center;
+    margin-right: 200px;
+    padding-bottom: 120px;
+
+}
+
+.cart h1{
+    font-size: 48px;
+    font-weight: 900;
+    color: #00FF88;
+}
+
+
+.cart p{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.721);
+}
+
+.why{
+  
+    background: #230E3D;
+    padding: 120px 200px;
+    
+}
+
+.title{
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+   text-align: center;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+      grid-template-areas: 
+    "card1 card2 card2"
+    "card1 card3 card3"
+    "card4 card4 card5";
+}
+
+.card1{grid-area: card1;}
+.card2{grid-area: card2;}
+.card3{grid-area: card3;}
+.card4{grid-area: card4;}
+.card5{grid-area: card5;}
+
+.card-container h3{
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+}
+
+.card-container p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+#card{
+    border-radius: 40px;
+    background: #351165;
+    padding: 40px;
+    gap: 16px;
+  
+}
+    
+
