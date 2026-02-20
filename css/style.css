@@ -448,3 +448,369 @@ padding-left: 200px;
     line-height: 24px;
     color: rgba(255, 255, 255, 0.593);
 }
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .logo {
+        font-size: 24px;
+        width: auto;
+    }
+    .menu {
+        gap: 20px;
+    }
+    .menu a {
+        font-size: 14px;
+    }
+    .subscribe-btn {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+    .circle {
+        width: 250px;
+        height: 250px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+    .badge {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    .content h1 {
+        font-size: 48px;
+    }
+    .content p {
+        font-size: 14px;
+    }
+    .btn {
+        padding-top: 20px;
+        padding-left: 60px;
+        font-size: 14px;
+    }
+    .about-section h2 {
+        font-size: 36px;
+    }
+    .about-section p {
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 14px;
+    }
+    hr {
+        width: 90%;
+    }
+    .cart-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 100px;
+        margin-right: 100px;
+        gap: 40px;
+        padding-bottom: 80px;
+    }
+    .cart h1 {
+        font-size: 36px;
+    }
+    .cart p {
+        font-size: 14px;
+    }
+    .why {
+        padding: 80px 100px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "card1 card2"
+        "card1 card3"
+        "card4 card5";
+        gap: 20px;
+    }
+    #card {
+        padding: 30px;
+    }
+    .card-container h3 {
+        font-size: 20px;
+    }
+    .card-container p {
+        font-size: 14px;
+    }
+    .feature-section h2 {
+        font-size: 36px;
+    }
+    .feature {
+        flex-direction: column;
+        padding-left: 100px;
+        padding-right: 100px;
+        gap: 20px;
+    }
+    .video {
+        max-width: 100%;
+    }
+    .video iframe {
+        height: 180px;
+    }
+    .video-container h3 {
+        font-size: 20px;
+    }
+    .video-container p {
+        font-size: 14px;
+    }
+    .host {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .host h2 {
+        font-size: 36px;
+        padding-top: 80px;
+    }
+    .host-container {
+        flex-direction: column;
+        max-width: 100%;
+        max-height: none;
+        gap: 16px;
+        padding: 20px;
+    }
+    .host-img {
+        padding: 20px;
+        width: 80px;
+        height: 80px;
+    }
+    .host-content h3 {
+        font-size: 28px;
+    }
+    .host-content p {
+        font-size: 14px;
+    }
+    .social {
+        max-width: none;
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .footer {
+        height: 350px;
+    }
+    .social-link {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .img-title {
+        font-size: 14px;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+}
+
+/* Small Devices: up to 576px */
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+    }
+    .logo {
+        font-size: 20px;
+        width: auto;
+        margin-top: 0;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .menu li {
+        width: 100%;
+    }
+    .menu a {
+        font-size: 14px;
+        display: block;
+        text-align: left;
+    }
+    .subscribe-btn {
+        font-size: 14px;
+        padding: 10px 14px;
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    .hero {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+    .circle {
+        width: 200px;
+        height: 200px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .mic {
+        width: 40%;
+    }
+    .badge {
+        font-size: 14px;
+        padding: 4px 8px;
+        top: 0;
+        right: 0;
+    }
+    .content h1 {
+        font-size: 36px;
+    }
+    .content p {
+        font-size: 14px;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .btn {
+        padding-top: 0;
+        padding-left: 0;
+        padding: 12px 20px;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .spotify {
+        padding: 12px 20px;
+    }
+    .subscribe {
+        padding: 12px 20px;
+    }
+    .about-section h2 {
+        font-size: 28px;
+    }
+    .about-section p {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    hr {
+        width: 95%;
+    }
+    .cart-container {
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 30px;
+        padding-bottom: 60px;
+    }
+    .cart h1 {
+        font-size: 32px;
+    }
+    .cart p {
+        font-size: 14px;
+    }
+    .why {
+        padding: 60px 20px;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .card-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5";
+        gap: 20px;
+    }
+    #card {
+        padding: 20px;
+    }
+    .card-container h3 {
+        font-size: 18px;
+    }
+    .card-container p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .feature-section h2 {
+        font-size: 28px;
+    }
+    .feature {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 20px;
+    }
+    .video {
+        max-width: 100%;
+    }
+    .video iframe {
+        height: 160px;
+    }
+    .video-container {
+        padding: 16px;
+    }
+    .video-container h3 {
+        font-size: 18px;
+    }
+    .video-container p {
+        font-size: 14px;
+    }
+    .host {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .host h2 {
+        font-size: 28px;
+        padding-top: 60px;
+    }
+    .host-container {
+        flex-direction: column;
+        max-width: 100%;
+        max-height: none;
+        gap: 16px;
+        padding: 20px;
+        align-items: flex-start;
+    }
+    .host-img {
+        padding: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .host-content h3 {
+        font-size: 24px;
+    }
+    .host-content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .social {
+        max-width: none;
+        display: flex;
+        gap: 16px;
+        padding-bottom: 20px;
+        justify-content: flex-start;
+    }
+    .social-icon {
+        width: 24px;
+    }
+    .footer {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .social-link {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .social-link img {
+        margin-bottom: 8px;
+    }
+    .img-title {
+        font-size: 14px;
+    }
+    .footer p {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
