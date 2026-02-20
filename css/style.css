@@ -299,5 +299,106 @@ hr{
     gap: 16px;
   
 }
+
+.feature-section h2{
+    font-size: 49px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+.feature{
+display: flex;
+justify-items: space-between;
+gap: 30px;
+padding-left: 200px;
+    padding-right: 200px;
+
+    
+    
+    color: white;
+}
+.video{
+    background: #250D44;
+    border-radius: 14px;
+    max-width: 380px;
+}
     
 
+.video iframe{
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+  
+ 
+}
+.video-container{
+   padding: 24px;
+}
+
+.video-container h3{
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+}
+
+.video-container p{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.611);
+    line-height: 24px;
+}
+
+.host{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.host h2{
+    text-align: center;
+    font-size: 48px;
+    padding-top: 120px;
+
+}
+
+.host-container{
+    display: flex;
+    gap: 24px;
+    max-width: 1120px;
+    
+   
+    border-radius: 30px;
+
+    align-items: center;
+    box-sizing: content-box;
+    max-height: 280px;
+    background: #3511654b;
+}
+
+.host-img{
+    padding: 40px 24px 40px;
+}
+.social{
+    max-width: 40px;
+    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+   padding-bottom: 49px;
+   
+    
+}
+
+.host-content{
+    box-sizing: border-box;
+}
+
+.host-content h3{
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+}
+
+.host-content{
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.613);
+}
