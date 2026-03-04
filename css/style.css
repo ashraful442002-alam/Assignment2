@@ -1,0 +1,72 @@
+.body{
+    background: #1A0B2E;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px 30px 30px;
+
+    background-color: #1A0B2E;
+    
+
+}
+
+
+.logo{
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    margin-top: 24px;
+    padding: 30px;
+}
+
+.logo span{
+        background: linear-gradient(-180deg,#9100F8,#FB09B4,#f7e83f);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+ 
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+
+.menu a{
+     
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+}
+
+.menu a:hover{
+    color: rgba(161, 0, 105, 0.946);
+    
+}
+
+.subscribe-btn{
+  
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #ffcc33, #ff33cc, #9933ff);
+    border: none;
+    border-radius: 1000px;
+    padding: 12px 16px;
+    margin-top: 24px;
+}
+
+.subscribe-btn:hover{
+   transform: rotateZ(9deg);
+}
