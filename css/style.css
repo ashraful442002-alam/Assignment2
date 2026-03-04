@@ -238,3 +238,54 @@ hr{
     color: rgba(255, 255, 255, 0.721);
 }
 
+
+
+.why{
+  
+    background: #230E3D;
+    padding: 120px 200px;
+    
+}
+
+.title{
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+   text-align: center;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+      grid-template-areas: 
+    "card1 card2 card2"
+    "card1 card3 card3"
+    "card4 card4 card5";
+}
+
+.card1{grid-area: card1;}
+.card2{grid-area: card2;}
+.card3{grid-area: card3;}
+.card4{grid-area: card4;}
+.card5{grid-area: card5;}
+
+.card-container h3{
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+}
+
+.card-container p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+#card{
+    border-radius: 40px;
+    background: #351165;
+    padding: 40px;
+    gap: 16px;
+  
+}
