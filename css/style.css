@@ -394,3 +394,47 @@ padding-left: 200px;
     color: rgba(255, 255, 255, 0.613);
 }
 
+
+.footer-section{
+    align-items: center;
+}
+
+.footer{
+    background: url("../assets/footer-bg.png")  center no-repeat;
+ 
+    width: 100%;
+    height: 412px;
+
+
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    text-align: center;
+
+
+}
+
+
+.social-link{
+ display: flex;
+    gap: 16px;
+   
+   padding-top: 32px;
+   padding-bottom: 32px;
+}
+
+.img-title{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.613);
+    gap: 8px;
+}
+
+.footer  p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.593);
+}
